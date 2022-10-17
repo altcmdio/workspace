@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "workspace",
+  "version": "1.0.0",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {},
+  "devDependencies": {}
+}

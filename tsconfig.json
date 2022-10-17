@@ -1,0 +1,13 @@
+{
+  "references": [],
+  "include": [],
+  "exclude": [
+    ".devcontainer",
+    ".vscode",
+    "node_modules",
+    "**/node_modules",
+    "**/*.spec.ts",
+    "**/*.d.ts"
+  ],
+  "compilerOptions": {}
+}

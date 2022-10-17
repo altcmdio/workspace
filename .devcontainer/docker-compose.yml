@@ -1,0 +1,23 @@
+version: '3.8'
+
+networks:
+  default:
+    name: ${COMPOSE_PROJECT_NAME}-net
+
+services:
+  vscode:
+    init: true
+    container_name: ${COMPOSE_PROJECT_NAME}-vscode
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sleep infinity
+    environment:
+      - COMPOSE_PROJECT_NAME
+      - SOURCE_ABSOLUTE_PATH=${PWD}
+      - HOME_ABSOLUTE_PATH=${HOME}
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - ..:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
